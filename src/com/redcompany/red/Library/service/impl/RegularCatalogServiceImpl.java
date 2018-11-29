@@ -12,23 +12,27 @@ import java.util.List;
 public class RegularCatalogServiceImpl  implements CatalogService{
 
 
-    private BookDao bookDao;
+    private  BookDao bookDao = new BookDaoCollectionImpl();
+    private Catalog catalog = new Catalog();
 
     @Override
     public Catalog listCatalog() {
-        Catalog catalog = new Catalog();
         catalog.setResponsiblePerson("Ivan Ivanov");
         catalog.setCreationData(new Date());
-
         // bad code !!!!!!!!! Use factory1. Hardcode!Fix later
-        BookDao bookDao = new BookDaoCollectionImpl();
         List<Book> books = bookDao.getBooks();
-
         catalog.setBooks(books);
 
         return catalog;
 
     }
+
+    public Catalog addBookToCatalog(){
+        bookDao.addBook();
+        return catalog;
+    }
+
+
 
 
 }

@@ -1,9 +1,6 @@
 package com.redcompany.red.Library.controller.command;
 
-import com.redcompany.red.Library.controller.command.impl.DefaultCommand;
-import com.redcompany.red.Library.controller.command.impl.ViewBookCatalogCommand;
-import com.redcompany.red.Library.controller.command.impl.ViewBookFindByTitleCommand;
-import com.redcompany.red.Library.controller.command.impl.ViewSingleCatalogRowCommand;
+import com.redcompany.red.Library.controller.command.impl.*;
 
 public class CommandManager {
 
@@ -19,6 +16,9 @@ public class CommandManager {
                 break;
             case "find_book":
                 command = new ViewBookFindByTitleCommand();
+                break;
+            case "add_book":
+                command = new AddNewBookToCatalogCommand();
                 break;
         }
         return command;

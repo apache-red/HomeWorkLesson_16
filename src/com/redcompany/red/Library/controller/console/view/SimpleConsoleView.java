@@ -40,7 +40,7 @@ public class SimpleConsoleView {
                 userInput.put("book_title", 1);
                 break;
             case 4:
-                //implement later
+                userInput.put("user_action", "add_book");
                 break;
         }
 
