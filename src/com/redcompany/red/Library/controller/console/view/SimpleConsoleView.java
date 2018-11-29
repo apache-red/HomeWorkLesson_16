@@ -2,6 +2,7 @@ package com.redcompany.red.Library.controller.console.view;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class SimpleConsoleView {
 
@@ -46,7 +47,18 @@ public class SimpleConsoleView {
     }
 
     private static int readMenuItem() {
-        // use scanner to get menu item
-        return 1; //2 ....5
+        System.out.print("Input field: ");
+        Scanner scanner = new Scanner(System.in);
+        int number = 0;
+        if (scanner.hasNextInt()) {
+            number = scanner.nextInt();
+        } else {
+            System.out.println("!Exeption! Enter a number");
+            readMenuItem();
+        }
+        return number;
     }
+
+
+
 }

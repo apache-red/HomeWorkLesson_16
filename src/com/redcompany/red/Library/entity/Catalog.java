@@ -85,4 +85,16 @@ public class Catalog {
             return books.get(row);
         }else return null;
     }
+
+    public Book getFindTitle(String title) {
+        if (books !=null){
+            for (int i = 0; i < books.size() ; i++) {
+                if ( books.get(i).getTitle().equals(title)){
+                    return books.get(i);
+                }
+            }
+        }
+        return null;
+    }
+
 }

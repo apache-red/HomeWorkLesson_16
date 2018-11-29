@@ -20,7 +20,7 @@ public class RegularCatalogServiceImpl  implements CatalogService{
         catalog.setResponsiblePerson("Ivan Ivanov");
         catalog.setCreationData(new Date());
 
-        // bad code !!!!!!!!! Use factory1
+        // bad code !!!!!!!!! Use factory1. Hardcode!Fix later
         BookDao bookDao = new BookDaoCollectionImpl();
         List<Book> books = bookDao.getBooks();
 

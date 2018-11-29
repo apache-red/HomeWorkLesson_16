@@ -2,6 +2,7 @@ package com.redcompany.red.Library.controller.command;
 
 import com.redcompany.red.Library.controller.command.impl.DefaultCommand;
 import com.redcompany.red.Library.controller.command.impl.ViewBookCatalogCommand;
+import com.redcompany.red.Library.controller.command.impl.ViewBookFindByTitleCommand;
 import com.redcompany.red.Library.controller.command.impl.ViewSingleCatalogRowCommand;
 
 public class CommandManager {
@@ -17,7 +18,7 @@ public class CommandManager {
                 command = new ViewSingleCatalogRowCommand();
                 break;
             case "find_book":
-                //command = new ViewBookCatalogCommand();
+                command = new ViewBookFindByTitleCommand();
                 break;
         }
         return command;
