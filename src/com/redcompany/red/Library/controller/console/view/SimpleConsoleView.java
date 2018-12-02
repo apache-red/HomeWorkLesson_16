@@ -23,6 +23,7 @@ public class SimpleConsoleView {
         System.out.println("2 - view single catalog row");
         System.out.println("3 - find book by title");
         System.out.println("4 - add new book");
+        System.out.println("0 - test");
     }
 
     public Map<String, Object> readUserInput() {
@@ -50,6 +51,9 @@ public class SimpleConsoleView {
                 break;
             case 4:
                 userInput.put("user_action", "add_book");
+                break;
+            case 0:
+                userInput.put("user_action", "test_test");
                 break;
         }
 

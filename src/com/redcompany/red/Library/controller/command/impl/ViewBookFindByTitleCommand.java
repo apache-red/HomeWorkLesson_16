@@ -1,6 +1,8 @@
 package com.redcompany.red.Library.controller.command.impl;
 
 import com.redcompany.red.Library.controller.command.BasicCommand;
+import com.redcompany.red.Library.data.LibraryCommand;
+
 import com.redcompany.red.Library.entity.Book;
 import com.redcompany.red.Library.entity.Catalog;
 import com.redcompany.red.Library.service.CatalogService;
@@ -14,7 +16,7 @@ public class ViewBookFindByTitleCommand implements BasicCommand {
 
 
     @Override
-    public void performAction(Map<String, Object> param) {
+    public void performAction(Map<String, Object> param,  LibraryCommand libraryCommand) {
 
         System.out.println(param);
 

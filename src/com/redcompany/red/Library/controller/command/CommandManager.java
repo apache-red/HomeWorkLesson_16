@@ -22,6 +22,9 @@ public class CommandManager {
             case "add_book":
                 command = new AddNewBookToCatalogCommand();
                 break;
+            case "test_test":
+                command = new ViewBookLibraryCommand();
+                break;
         }
         return command;
     }

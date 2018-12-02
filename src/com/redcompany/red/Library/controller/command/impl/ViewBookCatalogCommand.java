@@ -1,7 +1,8 @@
 package com.redcompany.red.Library.controller.command.impl;
 
 import com.redcompany.red.Library.controller.command.BasicCommand;
-import com.redcompany.red.Library.entity.Catalog;
+import com.redcompany.red.Library.data.LibraryCommand;
+import com.redcompany.red.Library.data.LibraryData;import com.redcompany.red.Library.entity.Catalog;
 import com.redcompany.red.Library.service.CatalogService;
 import com.redcompany.red.Library.service.impl.RegularCatalogServiceImpl;
 
@@ -12,8 +13,10 @@ public class ViewBookCatalogCommand implements BasicCommand {
     private CatalogService catalogService;
 
     @Override
-    public void performAction(Map<String, Object> param) {
+    public void performAction(Map<String, Object> param,  LibraryCommand libraryCommand) {
 // bad code ! use factory
+
+
 
         catalogService = new RegularCatalogServiceImpl();
         Catalog catalog = catalogService.listCatalog();
