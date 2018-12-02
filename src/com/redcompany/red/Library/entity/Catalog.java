@@ -52,8 +52,10 @@ public class Catalog {
     public String toString() {
         return "Catalog{" +
                 "responsiblePerson='" + responsiblePerson + '\'' +
-                ", creationData=" + creationData +
-                ", books=" + books +
+                ","
+                + '\n' +"creationData=" + creationData +
+                ","
+                + '\n' + "books=" + books +
                 '}';
     }
 

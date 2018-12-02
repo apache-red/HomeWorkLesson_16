@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface LibraryCommand {
 
-    List<Library> getLibraryList();
+    Library getLibrary();
 }

@@ -1,6 +1,7 @@
 package com.redcompany.red.Library.controller.command.impl;
 
 import com.redcompany.red.Library.controller.command.BasicCommand;
+import com.redcompany.red.Library.controller.console.view.ResultConsoleView;
 import com.redcompany.red.Library.data.LibraryCommand;
 import com.redcompany.red.Library.data.LibraryData;
 import com.redcompany.red.Library.entity.Catalog;
@@ -16,7 +17,9 @@ import java.util.Map;
 public class ViewBookLibraryCommand implements BasicCommand {
 
     private LibraryService libraryService;
-    private List<Library> libraryList;
+    private List<Catalog> catalogList;
+    private Library library;
+    private Catalog catalog;
 
     @Override
     public void performAction(Map<String, Object> param, LibraryCommand libraryCommand) {
@@ -24,11 +27,16 @@ public class ViewBookLibraryCommand implements BasicCommand {
 
 
         libraryService = new RegularLibraryServiceImpl();
-        libraryList = libraryCommand.getLibraryList();
+        System.out.println();
+        library = libraryCommand.getLibrary();
+        catalogList = library.getCatalogs();
+        //hardcode
+        catalog = catalogList.get(0);
+        ResultConsoleView.showResult(catalog);
 
 
 
-        System.out.println(libraryList.size());
+        //System.out.println(libraryList.size());
 
 
        // Library library = libraryService.

@@ -16,9 +16,9 @@ public class RegularLibraryServiceImpl implements LibraryService {
 
 
     @Override
-    public List<Library> getListLibraries() {
+    public LibraryData getLibrary() {
 
-        return libraryData.getLibraryList();
 
+        return libraryData;
     }
 }

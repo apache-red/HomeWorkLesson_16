@@ -18,7 +18,8 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return '\n' +
+                "Book{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 '}';
