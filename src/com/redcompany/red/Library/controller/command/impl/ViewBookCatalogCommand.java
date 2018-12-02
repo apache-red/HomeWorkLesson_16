@@ -14,6 +14,7 @@ public class ViewBookCatalogCommand implements BasicCommand {
     @Override
     public void performAction(Map<String, Object> param) {
 // bad code ! use factory
+
         catalogService = new RegularCatalogServiceImpl();
         Catalog catalog = catalogService.listCatalog();
 

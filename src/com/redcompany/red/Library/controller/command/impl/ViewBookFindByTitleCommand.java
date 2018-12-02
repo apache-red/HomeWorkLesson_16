@@ -16,6 +16,8 @@ public class ViewBookFindByTitleCommand implements BasicCommand {
     @Override
     public void performAction(Map<String, Object> param) {
 
+        System.out.println(param);
+
         catalogService = new RegularCatalogServiceImpl();
         Catalog catalog = catalogService.listCatalog();
         //hardcode

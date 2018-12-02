@@ -6,24 +6,33 @@ import java.util.Scanner;
 
 public class SimpleConsoleView {
 
-    public static Map<String, Object> userInput = new HashMap<>();
+
+    // итог класса mapa с action и названием команды
+    // Это V в MVC
+
+    public Map<String, Object> userInput = new HashMap<>();
 
 
-    public static void showBasicMenu() {
+    public void startConsoleView() {
+        showBasicMenu();
+
+    }
+
+    private void showBasicMenu() {
         System.out.println("1 - view books catalog");
         System.out.println("2 - view single catalog row");
         System.out.println("3 - find book by title");
         System.out.println("4 - add new book");
     }
 
-    public static Map<String, Object> readUserInput() {
+    public Map<String, Object> readUserInput() {
         int item = readMenuItem();
         getInputData(item);
 
         return userInput;
     }
 
-    private static void getInputData(int menuItem) {
+    private void getInputData(int menuItem) {
 
         switch (menuItem) {
             case 1:
@@ -46,7 +55,7 @@ public class SimpleConsoleView {
 
     }
 
-    private static int readMenuItem() {
+    private int readMenuItem() {
         System.out.print("Input field: ");
         Scanner scanner = new Scanner(System.in);
         int number = 0;
@@ -58,7 +67,6 @@ public class SimpleConsoleView {
         }
         return number;
     }
-
 
 
 }

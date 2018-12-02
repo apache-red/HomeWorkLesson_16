@@ -4,6 +4,8 @@ import com.redcompany.red.Library.controller.command.impl.*;
 
 public class CommandManager {
 
+    // это С в MVC . принимает команду от V и передает ее
+
     private static BasicCommand command = new DefaultCommand();
 
     public static BasicCommand defineCommand(String action){
